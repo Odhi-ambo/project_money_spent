@@ -102,4 +102,12 @@ class ExpenseData {
         return '';
     }
   }
+
+  //get the date for the start of the week(sunday)
+  DateTime getStartOfWeek() {
+    DateTime? startOfWeek;
+
+    //get today's date
+    DateTime Today = DateTime.now();
+  }
 }
