@@ -1,12 +1,12 @@
 import 'package:isar/isar.dart';
 
-class Expense {
+class ExpenseItem {
   Id id = Isar.autoIncrement;
   late final String name;
   late final double amount;
   late final DateTime date;
 
-  Expense({
+  ExpenseItem({
     required this.name,
     required this.amount,
     required this.date,
