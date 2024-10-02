@@ -1,9 +1,9 @@
 import 'package:expense_tracker/models/expense.dart';
 
-class ExpenseData{
+class ExpenseData {
   //list of all expenses
   List<ExpenseItem> overallExpenseList = [
-   /* Expense(
+    /* Expense(
       id: 1,
       title: 'Groceries',
       amount: 100.0,
@@ -65,11 +65,11 @@ class ExpenseData{
     ),
     */
   ];
- /* 
+
   //get expense list
-  List<Expense> get getExpenses{
-    return expenses;
-  }
+  List<ExpenseItem> getAllExpenseList() {
+    return overallExpenseList;
+  } /*
   //add new expense
   void addExpense(Expense expense){
     expenses.add(expense);
