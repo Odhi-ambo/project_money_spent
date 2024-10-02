@@ -69,11 +69,13 @@ class ExpenseData {
   //get expense list
   List<ExpenseItem> getAllExpenseList() {
     return overallExpenseList;
-  } /*
-  //add new expense
-  void addExpense(Expense expense){
-    expenses.add(expense);
   }
+
+  //add new expense
+  void addNewExpense(ExpenseItem newExpense) {
+    overallExpenseList.add(newExpense);
+  }
+  /*
   //delete expense
   void deleteExpense(int id){
     expenses.removeWhere((element) => element.id == id);
