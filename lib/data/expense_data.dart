@@ -75,14 +75,15 @@ class ExpenseData {
   void addNewExpense(ExpenseItem newExpense) {
     overallExpenseList.add(newExpense);
   }
-  
+
   //delete expense
-  void deleteExpense(ExpenseItem expense){
+  void deleteExpense(ExpenseItem expense) {
     overallExpenseList.remove(expense);
   }
+
   //get weekday(mon,tues,wed,thurs,fri,sat,sun)from a dateTime object
-  String getWeekday(DateTime date) {
-    switch (date.weekday) {
+  String getWeekday(DateTime dateTime) {
+    switch (dateTime.weekday) {
       case 1:
         return 'Mon';
       case 2:
@@ -100,6 +101,5 @@ class ExpenseData {
       default:
         return '';
     }
-  } 
-  
+  }
 }
