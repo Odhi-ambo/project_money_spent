@@ -103,11 +103,19 @@ class ExpenseData {
     }
   }
 
-  //get the date for the start of the week(sunday)
-  DateTime getStartOfWeek() {
+  //get the date for the start of the week
+  DateTime startOfWeek() {
     DateTime? startOfWeek;
 
     //get today's date
-    DateTime Today = DateTime.now();
+    DateTime today = DateTime.now();
+
+    //go back from today to the start of the week
+    for (int i = 0; i < 7; i++) {
+      if (getWeekday(today.subtract(Duration(days: i))) == 'Mon') {
+        startOfWeek = today.subtract(Duration(days: i));
+      }
+    }
+    return startOfWeek!;
   }
 }
