@@ -75,10 +75,10 @@ class ExpenseData {
   void addNewExpense(ExpenseItem newExpense) {
     overallExpenseList.add(newExpense);
   }
-  /*
+  
   //delete expense
-  void deleteExpense(int id){
-    expenses.removeWhere((element) => element.id == id);
+  void deleteExpense(ExpenseItem expense){
+    overallExpenseList.remove(expense);
   }
-  */
+  
 }
