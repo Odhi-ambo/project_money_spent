@@ -118,6 +118,10 @@ class ExpenseData {
     }
     return startOfWeek!;
 
-    Map<String, double> calculateDailyExpenseSummary(){}
+    Map<String, double> calculateDailyExpenseSummary() {
+      Map<String, double> dailyExpenseSummary = {
+        //date in the format yyyy-MM-dd : total expense for that day
+      };
+    }
   }
 }
