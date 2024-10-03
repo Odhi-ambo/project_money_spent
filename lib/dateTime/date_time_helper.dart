@@ -5,4 +5,6 @@ String convertDateTimeToString(DateTime dateTime) {
 
   //month in the format MM
   String month = dateTime.month.toString().padLeft(2, '0');
+  //day in the format dd
+  String day = dateTime.day.toString().padLeft(2, '0');
 }
