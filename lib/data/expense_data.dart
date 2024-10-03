@@ -117,5 +117,7 @@ class ExpenseData {
       }
     }
     return startOfWeek!;
+
+    Map<String, double> calculateDailyExpenseSummary(){}
   }
 }
