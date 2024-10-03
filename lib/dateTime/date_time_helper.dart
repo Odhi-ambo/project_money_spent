@@ -2,4 +2,7 @@
 String convertDateTimeToString(DateTime dateTime) {
   //year in the format yyyy
   String year = dateTime.year.toString();
+
+  //month in the format MM
+  String month = dateTime.month.toString().padLeft(2, '0');
 }
