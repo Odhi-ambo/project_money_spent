@@ -7,4 +7,7 @@ String convertDateTimeToString(DateTime dateTime) {
   String month = dateTime.month.toString().padLeft(2, '0');
   //day in the format dd
   String day = dateTime.day.toString().padLeft(2, '0');
+  //final date in the format yyyy-MM-dd
+  String date = '$year-$month-$day';
+  return date;
 }
