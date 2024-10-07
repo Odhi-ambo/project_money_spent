@@ -66,22 +66,25 @@ class ExpenseData {
     */
   ];
 
-  //get expense list
+  
+  
+
+  // Get expense list
   List<ExpenseItem> getAllExpenseList() {
     return overallExpenseList;
   }
 
-  //add new expense
+  // Add new expense
   void addNewExpense(ExpenseItem newExpense) {
     overallExpenseList.add(newExpense);
   }
 
-  //delete expense
+  // Delete expense
   void deleteExpense(ExpenseItem expense) {
     overallExpenseList.remove(expense);
   }
 
-  //get weekday(mon,tues,wed,thurs,fri,sat,sun)from a dateTime object
+  // Get weekday (Mon, Tue, Wed, Thu, Fri, Sat, Sun) from a DateTime object
   String getWeekday(DateTime dateTime) {
     switch (dateTime.weekday) {
       case 1:
@@ -103,25 +106,40 @@ class ExpenseData {
     }
   }
 
-  //get the date for the start of the week
+  // Get the date for the start of the week
   DateTime startOfWeek() {
-    DateTime? startOfWeek;
-
-    //get today's date
     DateTime today = DateTime.now();
-
-    //go back from today to the start of the week
     for (int i = 0; i < 7; i++) {
-      if (getWeekday(today.subtract(Duration(days: i))) == 'Mon') {
-        startOfWeek = today.subtract(Duration(days: i));
+      DateTime currentDay = today.subtract(Duration(days: i));
+      if (currentDay.weekday == DateTime.monday) {
+        return currentDay;
       }
     }
-    return startOfWeek!;
+    // Fallback in case of error, although logically not needed
+    return today;
+  }
 
-    Map<String, double> calculateDailyExpenseSummary() {
-      Map<String, double> dailyExpenseSummary = {
-        //date in the format yyyy-MM-dd : total expense for that day
-      };
+  // Calculate daily expense summary
+  Map<String, double> calculateDailyExpenseSummary() {
+    Map<String, double> dailyExpenseSummary = {};
+    for (var expense in overallExpenseList) {
+      // Convert DateTime object to string yyyy-MM-dd
+      String date = convertDateTimeToString(expense.dateTime);
+      double amount = double.parse(expense.amount as String); // Assuming amount is a String
+
+      if (dailyExpenseSummary.containsKey(date)) {
+        dailyExpenseSummary[date] = dailyExpenseSummary[date]! + amount;
+      } else {
+        dailyExpenseSummary[date] = amount;
+      }
     }
+    return dailyExpenseSummary;
+  }
+
+  // Helper function to convert DateTime to string in yyyy-MM-dd format
+  String convertDateTimeToString(DateTime dateTime) {
+    // Assuming this method is defined elsewhere, like DateFormat from intl package
+    return '${dateTime.year}-${dateTime.month.toString().padLeft(2, '0')}-${dateTime.day.toString().padLeft(2, '0')}';
   }
 }
+
