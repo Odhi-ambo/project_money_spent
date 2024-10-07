@@ -11,4 +11,6 @@ class ExpenseItem {
     required this.amount,
     required this.date,
   });
+
+  DateTime get dateTime => null;
 }
