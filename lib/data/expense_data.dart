@@ -1,3 +1,4 @@
+import 'package:expense_tracker/dateTime/date_time_helper.dart';
 import 'package:expense_tracker/models/expense.dart';
 
 class ExpenseData {
@@ -66,9 +67,6 @@ class ExpenseData {
     */
   ];
 
-  
-  
-
   // Get expense list
   List<ExpenseItem> getAllExpenseList() {
     return overallExpenseList;
@@ -124,8 +122,9 @@ class ExpenseData {
     Map<String, double> dailyExpenseSummary = {};
     for (var expense in overallExpenseList) {
       // Convert DateTime object to string yyyy-MM-dd
-      String date = convertDateTimeToString(expense.dateTime);
-      double amount = double.parse(expense.amount as String); // Assuming amount is a String
+      String date = convertDateTimeToString(expense.date);
+      double amount =
+          double.parse(expense.amount as String); // Assuming amount is a String
 
       if (dailyExpenseSummary.containsKey(date)) {
         dailyExpenseSummary[date] = dailyExpenseSummary[date]! + amount;
@@ -137,9 +136,7 @@ class ExpenseData {
   }
 
   // Helper function to convert DateTime to string in yyyy-MM-dd format
-  String convertDateTimeToString(DateTime dateTime) {
-    // Assuming this method is defined elsewhere, like DateFormat from intl package
-    return '${dateTime.year}-${dateTime.month.toString().padLeft(2, '0')}-${dateTime.day.toString().padLeft(2, '0')}';
-  }
+  //String convertDateTimeToString(DateTime dateTime) {
+  // Assuming this method is defined elsewhere, like DateFormat from intl package
+  // return '${dateTime.year}-${dateTime.month.toString().padLeft(2, '0')}-${dateTime.day.toString().padLeft(2, '0')}';
 }
-
