@@ -8,6 +8,9 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  //text controllers
+  final TextEditingController _titleController = TextEditingController();
+  final TextEditingController _amountController = TextEditingController();
   void addNewExpense() {
     //add new expense
     showDialog(
@@ -18,8 +21,14 @@ class _HomePageState extends State<HomePage> {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   const Text('Add new expense details'),
-                  TextField(),
-                  TextField(),
+                  TextField(
+                    controller: _titleController,
+                    decoration: const InputDecoration(labelText: 'Title'),
+                  ),
+                  TextField(
+                    controller: _amountController,
+                    decoration: const InputDecoration(labelText: 'Amount'),
+                  ),
                 ],
               ),
               actions: [
