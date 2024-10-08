@@ -9,7 +9,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   //text controllers
-  final TextEditingController _titleController = TextEditingController();
+  final TextEditingController _nameController = TextEditingController();
   final TextEditingController _amountController = TextEditingController();
   void addNewExpense() {
     //add new expense
@@ -22,8 +22,8 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   const Text('Add new expense details'),
                   TextField(
-                    controller: _titleController,
-                    decoration: const InputDecoration(labelText: 'Title'),
+                    controller: _nameController,
+                    decoration: const InputDecoration(labelText: 'Name'),
                   ),
                   TextField(
                     controller: _amountController,
