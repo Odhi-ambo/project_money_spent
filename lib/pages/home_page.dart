@@ -46,9 +46,13 @@ class _HomePageState extends State<HomePage> {
                   child: Text('Save'),
                 ),
               ],
-            ));
+            ),
+            );
   }
-
+  //save expense
+void save(){
+  
+}
   @override
   Widget build(BuildContext context) {
     return Scaffold(
