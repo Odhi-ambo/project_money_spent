@@ -1,3 +1,4 @@
+import 'package:expense_tracker/models/expense.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -14,45 +15,52 @@ class _HomePageState extends State<HomePage> {
   void addNewExpense() {
     //add new expense
     showDialog(
-        context: context,
-        builder: (context) => AlertDialog(
-              title: Text('Add New Expense'),
-              content: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  const Text('Add new expense details'),
-                  TextField(
-                    controller: _nameController,
-                    decoration: const InputDecoration(labelText: 'Name'),
-                  ),
-                  TextField(
-                    controller: _amountController,
-                    decoration: const InputDecoration(labelText: 'Amount'),
-                  ),
-                ],
-              ),
-              actions: [
-                TextButton(
-                  onPressed: () {
-                    Navigator.of(context).pop();
-                  },
-                  child: Text('Cancel'),
-                ),
-                TextButton(
-                  onPressed: () {
-                    // Add new expense
-                    Navigator.of(context).pop();
-                  },
-                  child: Text('Save'),
-                ),
-              ],
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text('Add New Expense'),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const Text('Add new expense details'),
+            TextField(
+              controller: _nameController,
+              decoration: const InputDecoration(labelText: 'Name'),
             ),
-            );
+            TextField(
+              controller: _amountController,
+              decoration: const InputDecoration(labelText: 'Amount'),
+            ),
+          ],
+        ),
+        actions: [
+          TextButton(
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+            child: Text('Cancel'),
+          ),
+          TextButton(
+            onPressed: () {
+              // Add new expense
+              Navigator.of(context).pop();
+            },
+            child: Text('Save'),
+          ),
+        ],
+      ),
+    );
   }
+
   //save expense
-void save(){
-  
-}
+  void save() {
+    //create expense item
+    ExpenseItem newExpense = ExpenseItem(
+      name: _nameController.text,
+      amount: double.parse(_amountController.text),
+      date: DateTime.now(),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
