@@ -14,7 +14,14 @@ class _HomePageState extends State<HomePage> {
         context: context,
         builder: (context) => AlertDialog(
               title: Text('Add New Expense'),
-              content: Text('Add new expense details'),
+              content: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const Text('Add new expense details'),
+                  TextField(),
+                  TextField(),
+                ],
+              ),
               actions: [
                 TextButton(
                   onPressed: () {
