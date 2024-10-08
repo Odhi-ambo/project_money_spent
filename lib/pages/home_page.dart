@@ -43,7 +43,7 @@ class _HomePageState extends State<HomePage> {
                     // Add new expense
                     Navigator.of(context).pop();
                   },
-                  child: Text('Add'),
+                  child: Text('Save'),
                 ),
               ],
             ));
