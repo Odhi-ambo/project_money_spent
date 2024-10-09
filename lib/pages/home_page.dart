@@ -1,5 +1,7 @@
-import 'package:expense_tracker/models/expense.dart';
+import 'package:expense_tracker/data/expense_data.dart';
+import 'package:expense_tracker/models/expense_item.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -59,6 +61,8 @@ class _HomePageState extends State<HomePage> {
       amount: double.parse(_amountController.text),
       date: DateTime.now(),
     );
+    //add the new expense
+    Provider.of<ExpenseData>(context, listen: false).addNewExpense(newExpense);
   }
 
   @override
