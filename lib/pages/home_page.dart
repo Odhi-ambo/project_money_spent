@@ -65,6 +65,7 @@ class _HomePageState extends State<HomePage> {
     Provider.of<ExpenseData>(context, listen: false).addNewExpense(newExpense);
   }
 
+  void cancel() {}
   @override
   Widget build(BuildContext context) {
     return Scaffold(
