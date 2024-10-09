@@ -1,5 +1,6 @@
 import 'package:expense_tracker/dateTime/date_time_helper.dart';
-import 'package:expense_tracker/models/expense.dart';
+
+import 'package:expense_tracker/models/expense_item.dart';
 import 'package:flutter/material.dart';
 
 class ExpenseData extends ChangeNotifier {
