@@ -85,6 +85,9 @@ class ExpenseData extends ChangeNotifier {
   // Delete expense
   void deleteExpense(ExpenseItem expense) {
     overallExpenseList.remove(expense);
+
+    // Notify listeners
+    notifyListeners();
   }
 
   // Get weekday (Mon, Tue, Wed, Thu, Fri, Sat, Sun) from a DateTime object
