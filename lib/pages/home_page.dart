@@ -64,6 +64,9 @@ class _HomePageState extends State<HomePage> {
     );
     //add the new expense
     Provider.of<ExpenseData>(context, listen: false).addNewExpense(newExpense);
+
+    //clear the text fields
+    _nameController.clear();
   }
 
   void cancel() {}
