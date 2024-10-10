@@ -90,7 +90,7 @@ class _HomePageState extends State<HomePage> {
                   title: Text(value.getAllExpenseList()[index].name),
                   subtitle:
                       Text(value.getAllExpenseList()[index].date.toString()),
-                  trailing: Text('\kshs' +
+                  trailing: Text('\kshs ' +
                       value.getAllExpenseList()[index].amount.toString()),
                 )),
       ),
