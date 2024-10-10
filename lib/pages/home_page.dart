@@ -43,6 +43,7 @@ class _HomePageState extends State<HomePage> {
           ),
           TextButton(
             onPressed: () {
+              save();
               // Add new expense
               Navigator.of(context).pop();
             },
