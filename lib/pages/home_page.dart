@@ -73,7 +73,7 @@ class _HomePageState extends State<HomePage> {
         onPressed: addNewExpense,
         child: Icon(Icons.add),
       ),
-      body: ListView(),
+      body: ListView.builder(itemBuilder: (context, index) => ListTile()),
     );
   }
 }
