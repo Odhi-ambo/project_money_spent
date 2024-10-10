@@ -68,7 +68,6 @@ class _HomePageState extends State<HomePage> {
     //clear the text fields
     _nameController.clear();
     _amountController.clear();
-
   }
 
   void cancel() {
@@ -76,6 +75,7 @@ class _HomePageState extends State<HomePage> {
     _nameController.clear();
     _amountController.clear();
   }
+
   @override
   Widget build(BuildContext context) {
     return Consumer<ExpenseData>(
@@ -88,6 +88,10 @@ class _HomePageState extends State<HomePage> {
             itemCount: value.getAllExpenseList().length,
             itemBuilder: (context, index) => ListTile(
                   title: Text(value.getAllExpenseList()[index].name),
+                  subtitle:
+                      Text(value.getAllExpenseList()[index].date.toString()),
+                  trailing:
+                      Text(value.getAllExpenseList()[index].amount.toString()),
                 )),
       ),
     );
