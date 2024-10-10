@@ -67,6 +67,8 @@ class _HomePageState extends State<HomePage> {
 
     //clear the text fields
     _nameController.clear();
+    _amountController.clear();
+    
   }
 
   void cancel() {}
