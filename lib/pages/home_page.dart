@@ -58,7 +58,7 @@ class _HomePageState extends State<HomePage> {
     //create expense item
     ExpenseItem newExpense = ExpenseItem(
       name: _nameController.text,
-      amount: double.parse(_amountController.text),
+      amount: double.tryParse(_amountController.text) ?? 0.0,
       date: DateTime.now(),
     );
     //add the new expense
