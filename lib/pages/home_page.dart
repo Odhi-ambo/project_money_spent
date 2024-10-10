@@ -68,10 +68,14 @@ class _HomePageState extends State<HomePage> {
     //clear the text fields
     _nameController.clear();
     _amountController.clear();
-    
+
   }
 
-  void cancel() {}
+  void cancel() {
+    //clear the text fields
+    _nameController.clear();
+    _amountController.clear();
+  }
   @override
   Widget build(BuildContext context) {
     return Consumer<ExpenseData>(
