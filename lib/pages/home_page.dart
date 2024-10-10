@@ -68,12 +68,18 @@ class _HomePageState extends State<HomePage> {
   void cancel() {}
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        onPressed: addNewExpense,
-        child: Icon(Icons.add),
+    return Consumer<ExpenseData>(
+      builder: (context, value, child) => Scaffold(
+        floatingActionButton: FloatingActionButton(
+          onPressed: addNewExpense,
+          child: Icon(Icons.add),
+        ),
+        body: ListView.builder(
+            itemCount: value.getAllExpenseList().length,
+            itemBuilder: (context, index) => ListTile(
+                  title: Text(value.getAllExpenseList()[index].name),
+                )),
       ),
-      body: ListView.builder(itemBuilder: (context, index) => ListTile()),
     );
   }
 }
