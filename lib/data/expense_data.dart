@@ -77,6 +77,9 @@ class ExpenseData extends ChangeNotifier {
   // Add new expense
   void addNewExpense(ExpenseItem newExpense) {
     overallExpenseList.add(newExpense);
+
+    // Notify listeners
+    notifyListeners();
   }
 
   // Delete expense
