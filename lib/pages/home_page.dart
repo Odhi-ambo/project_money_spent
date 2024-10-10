@@ -19,7 +19,7 @@ class _HomePageState extends State<HomePage> {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: Text('Add New Expense'),
+        title: const Text('Add New Expense'),
         content: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -39,7 +39,7 @@ class _HomePageState extends State<HomePage> {
             onPressed: () {
               Navigator.of(context).pop();
             },
-            child: Text('Cancel'),
+            child: const Text('Cancel'),
           ),
           TextButton(
             onPressed: () {
@@ -47,7 +47,7 @@ class _HomePageState extends State<HomePage> {
               // Add new expense
               Navigator.of(context).pop();
             },
-            child: Text('Save'),
+            child: const Text('Save'),
           ),
         ],
       ),
@@ -82,7 +82,7 @@ class _HomePageState extends State<HomePage> {
       builder: (context, value, child) => Scaffold(
         floatingActionButton: FloatingActionButton(
           onPressed: addNewExpense,
-          child: Icon(Icons.add),
+          child: const Icon(Icons.add),
         ),
         body: ListView.builder(
             itemCount: value.getAllExpenseList().length,
