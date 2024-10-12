@@ -88,7 +88,11 @@ class _HomePageState extends State<HomePage> {
           body: ListView(
             children: [
               //weekly summary
+
+              //expense list
               ListView.builder(
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
                 itemCount: value.getAllExpenseList().length,
                 itemBuilder: (context, index) => ExpenseTile(
                   name: value.getAllExpenseList()[index].name,
