@@ -34,9 +34,12 @@ class BarGraph extends StatelessWidget {
       friAmount: friAmount,
       satAmount: satAmount,
     );
+
+    barData.initializeBarData();
     return BarChart(BarChartData(
-      maxY: 100,
+      maxY: maxY,
       minY: 0,
+      barGroups: barData.barData.map((data) => BarChartGroupData(x: data.x)).toList(),
     ));
   }
 }
