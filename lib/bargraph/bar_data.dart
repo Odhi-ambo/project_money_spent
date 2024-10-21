@@ -19,5 +19,12 @@ class BarData {
     required this.satAmount,
   });
 
-List<IndividualBar> barData = [];
+  List<IndividualBar> barData = [];
+
+//initialize the barData
+  void initializeBarData() {
+    barData = [
+      IndividualBar(x: 0, y: sunAmount),
+    ];
+  }
 }
