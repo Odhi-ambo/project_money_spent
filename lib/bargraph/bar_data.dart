@@ -1,3 +1,5 @@
+import 'package:expense_tracker/bargraph/individual_bar.dart';
+
 class BarData {
   final double sunAmount;
   final double monAmount;
@@ -17,6 +19,5 @@ class BarData {
     required this.satAmount,
   });
 
-  double get totalAmount =>
-      sunAmount + monAmount + tueAmount + wedAmount + thuAmount + friAmount + satAmount;
+List<IndividualBar> barData = [];
 }
