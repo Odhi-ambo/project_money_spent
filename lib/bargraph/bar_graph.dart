@@ -39,7 +39,11 @@ class BarGraph extends StatelessWidget {
     return BarChart(BarChartData(
       maxY: maxY,
       minY: 0,
-      barGroups: barData.barData.map((data) => BarChartGroupData(x: data.x)).toList(),
+      barGroups: barData.barData
+          .map((data) => BarChartGroupData(x: data.x, barRods: [
+                BarChartRodData(toY: data.y),
+              ]))
+          .toList(),
     ));
   }
 }
