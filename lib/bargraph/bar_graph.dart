@@ -1,3 +1,4 @@
+import 'package:expense_tracker/bargraph/bar_data.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
@@ -23,6 +24,16 @@ class BarGraph extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //initialize the barData
+    BarData barData = BarData(
+      sunAmount: sunAmount,
+      monAmount: monAmount,
+      tueAmount: tueAmount,
+      wedAmount: wedAmount,
+      thuAmount: thuAmount,
+      friAmount: friAmount,
+      satAmount: satAmount,
+    );
     return BarChart(BarChartData(
       maxY: 100,
       minY: 0,
