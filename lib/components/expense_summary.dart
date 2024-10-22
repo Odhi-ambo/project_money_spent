@@ -16,10 +16,10 @@ class ExpenseSummary extends StatelessWidget {
             maxY: 100,
             sunAmount: 20,
             monAmount: 40,
-            tueAmount: 60,
+            tueAmount: 100,
             wedAmount: 80,
             thuAmount: 100,
-            friAmount: 120,
+            friAmount: 90,
             satAmount: 140),
       ),
     );
