@@ -15,11 +15,7 @@ class ExpenseTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       title: Text(name),
-      subtitle: Text(date.day.toString() +
-          '/' +
-          date.month.toString() +
-          '/' +
-          date.year.toString()),
+      subtitle: Text('${date.day}/${date.month}/${date.year}'),
       trailing: Text('kshs ' + amount.toString()),
     );
   }
