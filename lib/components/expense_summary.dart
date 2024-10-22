@@ -9,6 +9,6 @@ class ExpenseSummary extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Consumer<ExpenseData>(
-        builder: (context, value, child) => SizedBox());
+        builder: (context, value, child) => SizedBox(height: 200));
   }
 }
