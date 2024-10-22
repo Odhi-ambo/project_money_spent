@@ -1,5 +1,6 @@
 import 'package:expense_tracker/bargraph/bar_graph.dart';
 import 'package:expense_tracker/data/expense_data.dart';
+import 'package:expense_tracker/dateTime/date_time_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -10,13 +11,9 @@ class ExpenseSummary extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //get yyyy-mm-dd format of the start of the week
-    final String startOfWeekFormatted =
-        startOfWeek.toIso8601String().substring(0, 10);
-    //get yyyy-mm-dd format of the end of the week
-    final String endOfWeekFormatted = startOfWeek
-        .add(const Duration(days: 6))
-        .toIso8601String()
-        .substring(0, 10);
+    String sunday =
+        convertDateTimeToString(startOfWeek.add(const Duration(days: 1)));
+
     return Consumer<ExpenseData>(
       builder: (context, value, child) => SizedBox(
         height: 200,
