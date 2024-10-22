@@ -14,13 +14,13 @@ class ExpenseSummary extends StatelessWidget {
         height: 200,
         child: BarGraph(
             maxY: 100,
-            sunAmount: 20,
+            sunAmount: 50,
             monAmount: 40,
             tueAmount: 100,
             wedAmount: 80,
             thuAmount: 100,
             friAmount: 90,
-            satAmount: 140),
+            satAmount: 85),
       ),
     );
   }
