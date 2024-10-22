@@ -9,6 +9,14 @@ class ExpenseSummary extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //get yyyy-mm-dd format of the start of the week
+    final String startOfWeekFormatted =
+        startOfWeek.toIso8601String().substring(0, 10);
+    //get yyyy-mm-dd format of the end of the week
+    final String endOfWeekFormatted = startOfWeek
+        .add(const Duration(days: 6))
+        .toIso8601String()
+        .substring(0, 10);
     return Consumer<ExpenseData>(
       builder: (context, value, child) => SizedBox(
         height: 200,
