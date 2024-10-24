@@ -15,7 +15,8 @@ class ExpenseSummary extends StatelessWidget {
         convertDateTimeToString(startOfWeek.add(const Duration(days: 1)));
     String monday =
         convertDateTimeToString(startOfWeek.add(const Duration(days: 1)));
-    // String sunday = convertDateTimeToString(startOfWeek.add(const Duration(days: 1)));
+    String tunday =
+        convertDateTimeToString(startOfWeek.add(const Duration(days: 1)));
     // String sunday = convertDateTimeToString(startOfWeek.add(const Duration(days: 1)));
     // String sunday = convertDateTimeToString(startOfWeek.add(const Duration(days: 1)));
     // String sunday = convertDateTimeToString(startOfWeek.add(const Duration(days: 1)));
