@@ -11,9 +11,9 @@ class ExpenseSummary extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //get yyyy-mm-dd format of the start of the week
-    String Sun =
+    String sunday =
         convertDateTimeToString(startOfWeek.add(const Duration(days: 0)));
-    String Mon =
+    String monday =
         convertDateTimeToString(startOfWeek.add(const Duration(days: 1)));
     String tuesday =
         convertDateTimeToString(startOfWeek.add(const Duration(days: 2)));
