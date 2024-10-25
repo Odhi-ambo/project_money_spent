@@ -39,7 +39,7 @@ class BarGraph extends StatelessWidget {
     return BarChart(BarChartData(
       maxY: maxY,
       minY: 0,
-      gridData: FlGridData(show: false),
+      gridData: const FlGridData(show: false),
       borderData: FlBorderData(show: false),
       barGroups: barData.barData
           .map((data) => BarChartGroupData(x: data.x, barRods: [
