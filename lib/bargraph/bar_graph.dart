@@ -40,6 +40,7 @@ class BarGraph extends StatelessWidget {
       maxY: maxY,
       minY: 0,
       gridData: FlGridData(show: false),
+      borderData: FlBorderData(show: false),
       barGroups: barData.barData
           .map((data) => BarChartGroupData(x: data.x, barRods: [
                 BarChartRodData(
