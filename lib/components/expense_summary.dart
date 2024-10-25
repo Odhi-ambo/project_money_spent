@@ -16,15 +16,15 @@ class ExpenseSummary extends StatelessWidget {
     String Mon =
         convertDateTimeToString(startOfWeek.add(const Duration(days: 1)));
     String tuesday =
-        convertDateTimeToString(startOfWeek.add(const Duration(days: 3)));
+        convertDateTimeToString(startOfWeek.add(const Duration(days: 2)));
     String wednesday =
-        convertDateTimeToString(startOfWeek.add(const Duration(days: 1)));
+        convertDateTimeToString(startOfWeek.add(const Duration(days: 3)));
     String thursday =
-        convertDateTimeToString(startOfWeek.add(const Duration(days: 1)));
+        convertDateTimeToString(startOfWeek.add(const Duration(days: 4)));
     String friday =
-        convertDateTimeToString(startOfWeek.add(const Duration(days: 1)));
+        convertDateTimeToString(startOfWeek.add(const Duration(days: 5)));
     String sartuday =
-        convertDateTimeToString(startOfWeek.add(const Duration(days: 1)));
+        convertDateTimeToString(startOfWeek.add(const Duration(days: 6)));
 
     return Consumer<ExpenseData>(
       builder: (context, value, child) => const SizedBox(
