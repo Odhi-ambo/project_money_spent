@@ -45,7 +45,8 @@ class BarGraph extends StatelessWidget {
                     toY: data.y,
                     color: Colors.amber,
                     width: 25,
-                    borderRadius: BorderRadius.circular(4)),
+                    borderRadius: BorderRadius.circular(4),
+                    backDrawRodData: BackgroundBarChartRodData(show: true)),
               ]))
           .toList(),
     ));
