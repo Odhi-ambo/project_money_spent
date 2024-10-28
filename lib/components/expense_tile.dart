@@ -16,12 +16,15 @@ class ExpenseTile extends StatelessWidget {
     return ListTile(
       title: Text(
         name,
-        style: TextStyle(color: Colors.amber, fontFamily: 'Montserrat'),
+        style: TextStyle(
+            color: Colors.amber,
+            fontFamily: 'OpenSans',
+            fontWeight: FontWeight.bold),
       ),
       subtitle: Text('${date.day}/${date.month}/${date.year}'),
       trailing: Text(
         'kshs $amount',
-        style: TextStyle(color: Colors.redAccent),
+        style: TextStyle(color: Colors.redAccent, fontStyle: FontStyle.italic, fontFamily: 'OpenSans'),
       ),
     );
   }
