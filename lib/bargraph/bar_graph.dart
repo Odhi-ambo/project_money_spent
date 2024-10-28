@@ -62,3 +62,37 @@ class BarGraph extends StatelessWidget {
     ));
   }
 }
+
+Widget getBottomTitles(double value, TitleMeta meta) {
+  const style =
+      TextStyle(color: Colors.amber, fontWeight: FontWeight.bold, fontSize: 14);
+
+  Widget text;
+  switch (value.toInt()) {
+    case 0:
+      text = Text("Sun", style: style);
+      break;
+    case 1:
+      text = Text("Mon",);
+      break;
+    case 2:
+      text = Text("Tue");
+      break;
+    case 3:
+      text = Text("Wed");
+      break;
+    case 4:
+      text = Text("Thur");
+      break;
+    case 5:
+      text = Text("Fri");
+      break;
+    case 6:
+      text = Text("Sat");
+      break;
+    default:
+      text = Text('');
+      break;
+  }
+  return SideTitleWidget(child: text, axisSide: meta.axisSide);
+}
