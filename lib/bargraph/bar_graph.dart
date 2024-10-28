@@ -70,31 +70,43 @@ Widget getBottomTitles(double value, TitleMeta meta) {
   Widget text;
   switch (value.toInt()) {
     case 0:
-      text = Text("Sun", style: style);
+      text = Text('Sun', style: style);
       break;
     case 1:
       text = Text(
-        "Mon",
+        'Mon',
         style: style,
       );
       break;
     case 2:
       text = Text(
-        "Tue",
+        'Tue',
         style: style,
       );
       break;
     case 3:
-      text = Text("Wed",style: style,);
+      text = Text(
+        'Wed',
+        style: style,
+      );
       break;
     case 4:
-      text = Text("Thur",style: style,);
+      text = Text(
+        'Thur',
+        style: style,
+      );
       break;
     case 5:
-      text = Text("Fri",style: style,);
+      text = Text(
+        'Fri',
+        style: style,
+      );
       break;
     case 6:
-      text = Text("Sat",style: style,);
+      text = Text(
+        'Sat',
+        style: style,
+      );
       break;
     default:
       text = Text('');
