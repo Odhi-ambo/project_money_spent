@@ -24,7 +24,7 @@ class _HomePageState extends State<HomePage> {
       builder: (context) => AlertDialog(
         title: const Text(
           'Add New Expense',
-          style: TextStyle(color: Colors.pink),
+          style: TextStyle(color: Colors.pink, fontWeight: FontWeight.bold),
         ),
         content: Column(
           mainAxisSize: MainAxisSize.min,
@@ -51,7 +51,10 @@ class _HomePageState extends State<HomePage> {
             onPressed: () {
               Navigator.of(context).pop();
             },
-            child: const Text('Cancel'),
+            child: const Text(
+              'Cancel',
+              style: TextStyle(color: Colors.pink),
+            ),
           ),
           TextButton(
             onPressed: () {
@@ -59,7 +62,10 @@ class _HomePageState extends State<HomePage> {
               // Add new expense
               Navigator.of(context).pop();
             },
-            child: const Text('Save'),
+            child: const Text(
+              'Save',
+              style: TextStyle(color: Colors.pink),
+            ),
           ),
         ],
       ),
