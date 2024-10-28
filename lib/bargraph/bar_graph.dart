@@ -79,13 +79,13 @@ Widget getBottomTitles(double value, TitleMeta meta) {
       );
       break;
     case 2:
-      text = Text(
+      text = const Text(
         'Tue',
         style: style,
       );
       break;
     case 3:
-      text = Text(
+      text = const Text(
         'Wed',
         style: style,
       );
