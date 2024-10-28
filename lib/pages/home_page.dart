@@ -24,7 +24,7 @@ class _HomePageState extends State<HomePage> {
       builder: (context) => AlertDialog(
         title: const Text(
           'Add New Expense',
-          style: TextStyle(color: Colors.pink, fontWeight: FontWeight.bold),
+          style: TextStyle(color: Colors.amber, fontWeight: FontWeight.bold),
         ),
         content: Column(
           mainAxisSize: MainAxisSize.min,
@@ -32,7 +32,7 @@ class _HomePageState extends State<HomePage> {
             const Text(
               'Add new expense details',
               style: TextStyle(
-                  color: Colors.pinkAccent,
+                  color: Colors.amber,
                   fontFamily: 'OpenSans',
                   fontWeight: FontWeight.bold),
             ),
@@ -53,7 +53,7 @@ class _HomePageState extends State<HomePage> {
             },
             child: const Text(
               'Cancel',
-              style: TextStyle(color: Colors.pink),
+              style: TextStyle(color: Colors.amberAccent),
             ),
           ),
           TextButton(
@@ -64,7 +64,7 @@ class _HomePageState extends State<HomePage> {
             },
             child: const Text(
               'Save',
-              style: TextStyle(color: Colors.pink),
+              style: TextStyle(color: Colors.amberAccent),
             ),
           ),
         ],
