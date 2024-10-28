@@ -2,6 +2,7 @@ import 'package:expense_tracker/components/expense_summary.dart';
 import 'package:expense_tracker/components/expense_tile.dart';
 import 'package:expense_tracker/data/expense_data.dart';
 import 'package:expense_tracker/models/expense_item.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -21,11 +22,20 @@ class _HomePageState extends State<HomePage> {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('Add New Expense'),
+        title: const Text(
+          'Add New Expense',
+          style: TextStyle(color: Colors.pink),
+        ),
         content: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const Text('Add new expense details'),
+            const Text(
+              'Add new expense details',
+              style: TextStyle(
+                  color: Colors.pinkAccent,
+                  fontFamily: 'OpenSans',
+                  fontWeight: FontWeight.bold),
+            ),
             TextField(
               controller: _nameController,
               decoration: const InputDecoration(labelText: 'Name'),
