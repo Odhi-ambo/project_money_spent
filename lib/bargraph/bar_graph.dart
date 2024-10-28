@@ -36,40 +36,43 @@ class BarGraph extends StatelessWidget {
     );
 
     barData.initializeBarData();
-    return BarChart(BarChartData(
-      maxY: maxY,
-      minY: 0,
-      titlesData: const FlTitlesData(
-        show: true,
-        topTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
-        bottomTitles: AxisTitles(
-            sideTitles: SideTitles(
-                showTitles: true,
-                getTitlesWidget: getBottomTitles,
-                reservedSize: 30)),
-        leftTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
-        rightTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
-      ),
-      gridData: const FlGridData(show: false),
-      borderData: FlBorderData(show: false),
-      barGroups: barData.barData
-          .map((data) => BarChartGroupData(x: data.x, barRods: [
-                BarChartRodData(
-                    toY: data.y,
-                    color: Colors.amber,
-                    width: 25,
-                    borderRadius: BorderRadius.circular(4),
-                    backDrawRodData: BackgroundBarChartRodData(
-                        show: true, toY: maxY, color: Colors.black26)),
-              ]))
-          .toList(),
-    ));
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 10.0),
+      child: BarChart(BarChartData(
+        maxY: maxY,
+        minY: 0,
+        titlesData: const FlTitlesData(
+          show: true,
+          topTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
+          bottomTitles: AxisTitles(
+              sideTitles: SideTitles(
+                  showTitles: true,
+                  getTitlesWidget: getBottomTitles,
+                  reservedSize: 30)),
+          leftTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
+          rightTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
+        ),
+        gridData: const FlGridData(show: false),
+        borderData: FlBorderData(show: false),
+        barGroups: barData.barData
+            .map((data) => BarChartGroupData(x: data.x, barRods: [
+                  BarChartRodData(
+                      toY: data.y,
+                      color: Colors.amber,
+                      width: 25,
+                      borderRadius: BorderRadius.circular(4),
+                      backDrawRodData: BackgroundBarChartRodData(
+                          show: true, toY: maxY, color: Colors.black26)),
+                ]))
+            .toList(),
+      )),
+    );
   }
 }
 
 Widget getBottomTitles(double value, TitleMeta meta) {
   const style =
-      TextStyle(color: Colors.grey, fontWeight: FontWeight.bold, fontSize: 14);
+      TextStyle(color: Colors.amber, fontWeight: FontWeight.bold, fontSize: 14);
 
   Widget text;
   switch (value.toInt()) {
