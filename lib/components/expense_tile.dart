@@ -14,9 +14,15 @@ class ExpenseTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text(name),
+      title: Text(
+        name,
+        style: TextStyle(color: Colors.amber, fontFamily: 'Montserrat'),
+      ),
       subtitle: Text('${date.day}/${date.month}/${date.year}'),
-      trailing: Text('kshs $amount'),
+      trailing: Text(
+        'kshs $amount',
+        style: TextStyle(color: Colors.redAccent),
+      ),
     );
   }
 }
