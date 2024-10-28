@@ -85,10 +85,10 @@ Widget getBottomTitles(double value, TitleMeta meta) {
       );
       break;
     case 3:
-      text = Text("Wed");
+      text = Text("Wed",style: style,);
       break;
     case 4:
-      text = Text("Thur");
+      text = Text("Thur",style: style,);
       break;
     case 5:
       text = Text("Fri");
