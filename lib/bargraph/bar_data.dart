@@ -28,9 +28,9 @@ class BarData {
       IndividualBar(x: 2, y: monAmount),
       IndividualBar(x: 4, y: tueAmount),
       IndividualBar(x: 6, y: wedAmount),
-      IndividualBar(x: 0, y: thuAmount),
-      IndividualBar(x: 0, y: friAmount),
-      IndividualBar(x: 0, y: satAmount),
+      IndividualBar(x: 8, y: thuAmount),
+      IndividualBar(x: 10, y: friAmount),
+      IndividualBar(x: 12, y: satAmount),
     ];
   }
 }
