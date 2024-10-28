@@ -103,13 +103,13 @@ Widget getBottomTitles(double value, TitleMeta meta) {
       );
       break;
     case 6:
-      text = Text(
+      text = const Text(
         'Sat',
         style: style,
       );
       break;
     default:
-      text = Text('');
+      text = const Text('');
       break;
   }
   return SideTitleWidget(child: text, axisSide: meta.axisSide);
