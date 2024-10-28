@@ -40,8 +40,11 @@ class BarGraph extends StatelessWidget {
       maxY: maxY,
       minY: 0,
       titlesData: const FlTitlesData(
-          show: true,
-          topTitles: AxisTitles(sideTitles: SideTitles(showTitles: false))),
+        show: true,
+        topTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
+        bottomTitles: AxisTitles(sideTitles: SideTitles(showTitles: true)),
+        leftTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
+      ),
       gridData: const FlGridData(show: false),
       borderData: FlBorderData(show: false),
       barGroups: barData.barData
