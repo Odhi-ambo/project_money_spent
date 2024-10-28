@@ -25,12 +25,12 @@ class BarData {
   void initializeBarData() {
     barData = [
       IndividualBar(x: 0, y: sunAmount),
-      IndividualBar(x: 2, y: monAmount),
-      IndividualBar(x: 4, y: tueAmount),
-      IndividualBar(x: 6, y: wedAmount),
-      IndividualBar(x: 8, y: thuAmount),
-      IndividualBar(x: 10, y: friAmount),
-      IndividualBar(x: 12, y: satAmount),
+      IndividualBar(x: 1, y: monAmount),
+      IndividualBar(x: 2, y: tueAmount),
+      IndividualBar(x: 3, y: wedAmount),
+      IndividualBar(x: 4, y: thuAmount),
+      IndividualBar(x: 5, y: friAmount),
+      IndividualBar(x: 6, y: satAmount),
     ];
   }
 }
