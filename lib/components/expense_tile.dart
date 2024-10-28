@@ -19,12 +19,17 @@ class ExpenseTile extends StatelessWidget {
         style: TextStyle(
             color: Colors.amber,
             fontFamily: 'OpenSans',
-            fontWeight: FontWeight.bold),
+            fontWeight: FontWeight.bold,
+            fontStyle: FontStyle.italic),
       ),
       subtitle: Text('${date.day}/${date.month}/${date.year}'),
       trailing: Text(
         'kshs $amount',
-        style: TextStyle(color: Colors.redAccent, fontStyle: FontStyle.italic, fontFamily: 'OpenSans'),
+        style: TextStyle(
+            color: Colors.redAccent,
+            fontStyle: FontStyle.italic,
+            fontFamily: 'OpenSans',
+            fontWeight: FontWeight.bold),
       ),
     );
   }
