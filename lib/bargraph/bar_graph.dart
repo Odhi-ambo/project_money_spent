@@ -70,10 +70,10 @@ Widget getBottomTitles(double value, TitleMeta meta) {
   Widget text;
   switch (value.toInt()) {
     case 0:
-      text = Text('Sun', style: style);
+      text = const Text('Sun', style: style);
       break;
     case 1:
-      text = Text(
+      text = const Text(
         'Mon',
         style: style,
       );
