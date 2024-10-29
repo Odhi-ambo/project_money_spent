@@ -3,8 +3,7 @@ import 'package:expense_tracker/pages/home_Page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-void main() {
-  
+void main() async {
   runApp(const MyApp());
 }
 
@@ -24,6 +23,5 @@ class MyApp extends StatelessWidget {
         home: const HomePage(),
       ),
     );
-    
   }
 }
