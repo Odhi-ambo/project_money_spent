@@ -6,7 +6,11 @@ class HiveDatabase {
   final _myBox = Hive.box('expense_database');
 
   //write data
-  void saveData(List<ExpenseItem> allExpense){}
+  void saveData(List<ExpenseItem> allExpense){
+    /*
+
+    */
+  }
 
   //read data
 }
