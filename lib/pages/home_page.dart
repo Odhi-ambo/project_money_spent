@@ -112,6 +112,8 @@ class _HomePageState extends State<HomePage> {
               //weekly summary
               ExpenseSummary(startOfWeek: value.startOfWeek()),
 
+              
+
               //expense list
               ListView.builder(
                 shrinkWrap: true,
