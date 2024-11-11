@@ -43,8 +43,10 @@ class _HomePageState extends State<HomePage> {
             Row(
               children: [
                 //dollar textfield
+                TextField(),
 
                 //cents textfield
+                TextField()
               ],
 
               //cents textfield
