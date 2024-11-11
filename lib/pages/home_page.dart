@@ -89,9 +89,9 @@ class _HomePageState extends State<HomePage> {
   //save expense
   void save() {
     //putting the dollar and cents together
-    double amount = (_amountDollarController.text +
-        '.' +
-        _amountCentsController.text) as double;
+    double dollars = double.tryParse(_amountDollarController.text) ?? 0;
+    double cents = (double.tryParse(_amountCentsController.text) ?? 0) / 100;
+    double amount = dollars + cents;
     //create expense item
     ExpenseItem newExpense = ExpenseItem(
       name: _nameController.text,
@@ -105,7 +105,6 @@ class _HomePageState extends State<HomePage> {
     _nameController.clear();
     _amountDollarController.clear();
     _amountCentsController.clear();
-    
   }
 
   void cancel() {
