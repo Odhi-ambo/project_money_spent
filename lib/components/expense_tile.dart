@@ -16,7 +16,7 @@ class ExpenseTile extends StatelessWidget {
     return ListTile(
       title: Text(
         name,
-        style: TextStyle(
+        style: const TextStyle(
             color: Colors.amber,
             fontFamily: 'OpenSans',
             fontWeight: FontWeight.bold,
@@ -25,7 +25,7 @@ class ExpenseTile extends StatelessWidget {
       subtitle: Text('${date.day}/${date.month}/${date.year}'),
       trailing: Text(
         'kshs $amount',
-        style: TextStyle(
+        style: const TextStyle(
             color: Colors.redAccent,
             fontStyle: FontStyle.italic,
             fontFamily: 'OpenSans',
