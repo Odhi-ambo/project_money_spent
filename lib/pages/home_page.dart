@@ -41,10 +41,14 @@ class _HomePageState extends State<HomePage> {
               decoration: const InputDecoration(labelText: 'Name'),
             ),
             Row(
+              children: [
                 //dollar textfield
 
                 //cents textfield
-                )
+              ],
+
+              //cents textfield
+            )
           ],
         ),
         actions: [
