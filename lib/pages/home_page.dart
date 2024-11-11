@@ -40,11 +40,11 @@ class _HomePageState extends State<HomePage> {
               controller: _nameController,
               decoration: const InputDecoration(labelText: 'Name'),
             ),
-            TextField(
-              controller: _amountController,
-              keyboardType: TextInputType.number,
-              decoration: const InputDecoration(labelText: 'Amount'),
-            ),
+            Row(
+                //dollar textfield
+
+                //cents textfield
+                )
           ],
         ),
         actions: [
