@@ -1,7 +1,6 @@
 import 'package:expense_tracker/data/expense_data.dart';
 import 'package:expense_tracker/pages/home_Page.dart';
 import 'package:flutter/material.dart';
-import 'package:hive/hive.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:provider/provider.dart';
 
