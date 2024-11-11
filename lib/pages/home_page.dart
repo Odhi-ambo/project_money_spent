@@ -112,7 +112,9 @@ class _HomePageState extends State<HomePage> {
               //weekly summary
               ExpenseSummary(startOfWeek: value.startOfWeek()),
 
-              
+              const SizedBox(
+                height: 25,
+              ),
 
               //expense list
               ListView.builder(
