@@ -16,7 +16,8 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   //text controllers
   final TextEditingController _nameController = TextEditingController();
-  final TextEditingController _amountController = TextEditingController();
+  final TextEditingController _amountDollarController = TextEditingController();
+  final TextEditingController _amountCentsController = TextEditingController();
   void addNewExpense() {
     //add new expense
     showDialog(
@@ -43,10 +44,16 @@ class _HomePageState extends State<HomePage> {
             Row(
               children: [
                 //dollar textfield
-                TextField(),
+                TextField(
+                  controller: _amountDollarController,
+                  decoration: const InputDecoration(labelText: 'Dollar'),
+                ),
 
                 //cents textfield
-                TextField()
+                TextField(
+                  controller: _amountCentsController,
+                  decoration: const InputDecoration(labelText: 'Cents'),
+                ),
               ],
 
               //cents textfield
@@ -81,10 +88,14 @@ class _HomePageState extends State<HomePage> {
 
   //save expense
   void save() {
+    //putting the dollar and cents together
+    double amount = (_amountDollarController.text +
+        '.' +
+        _amountCentsController.text) as double;
     //create expense item
     ExpenseItem newExpense = ExpenseItem(
       name: _nameController.text,
-      amount: double.tryParse(_amountController.text) ?? 0.0,
+      amount: amount,
       date: DateTime.now(),
     );
     //add the new expense
@@ -92,13 +103,14 @@ class _HomePageState extends State<HomePage> {
 
     //clear the text fields
     _nameController.clear();
-    _amountController.clear();
+    _amountDollarController.clear();
+    _amountCentsController.clear();
+    
   }
 
   void cancel() {
     //clear the text fields
-    _nameController.clear();
-    _amountController.clear();
+    Navigator.pop(context);
   }
 
   @override
