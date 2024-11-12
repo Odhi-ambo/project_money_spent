@@ -18,6 +18,7 @@ class HiveDatabase {
         expense.amount,
         expense.date,
       ];
+      allExpenseFormatted.add(expenseFormatted);
     }
   }
   //read data
