@@ -6,11 +6,12 @@ class HiveDatabase {
   final box = Hive.box("expense_database");
 
   //write data
-  void saveData(List<ExpenseItem> allExpense){
+  void saveData(List<ExpenseItem> allExpense) {
     /*
 
     */
   }
+  List<List<dynamic>> allExpenseFormatted = [];
 
   //read data
 }
