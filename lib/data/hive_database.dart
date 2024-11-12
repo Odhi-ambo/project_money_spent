@@ -20,6 +20,8 @@ class HiveDatabase {
       ];
       allExpenseFormatted.add(expenseFormatted);
     }
+    //finally lets save the data
+    box.put("all_expense", allExpenseFormatted);
   }
   //read data
 }
