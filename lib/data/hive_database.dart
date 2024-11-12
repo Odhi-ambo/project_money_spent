@@ -15,7 +15,6 @@ class HiveDatabase {
     for (var expense in allExpense) {
       List<dynamic> expenseFormatted = [];
     }
-
-    //read data
   }
+  //read data
 }
