@@ -47,7 +47,7 @@ class _HomePageState extends State<HomePage> {
                 Expanded(
                   child: TextField(
                     controller: _amountDollarController,
-                    decoration: const InputDecoration(labelText: 'Dollar'),
+                    decoration: const InputDecoration(labelText: 'Kshs'),
                   ),
                 ),
 
