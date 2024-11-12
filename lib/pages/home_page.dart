@@ -44,9 +44,11 @@ class _HomePageState extends State<HomePage> {
             Row(
               children: [
                 //dollar textfield
-                TextField(
-                  controller: _amountDollarController,
-                  decoration: const InputDecoration(labelText: 'Dollar'),
+                Expanded(
+                  child: TextField(
+                    controller: _amountDollarController,
+                    decoration: const InputDecoration(labelText: 'Dollar'),
+                  ),
                 ),
 
                 //cents textfield
@@ -105,6 +107,7 @@ class _HomePageState extends State<HomePage> {
     _nameController.clear();
     _amountDollarController.clear();
     _amountCentsController.clear();
+    
   }
 
   void cancel() {
