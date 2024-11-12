@@ -10,8 +10,12 @@ class HiveDatabase {
     /*
 
     */
-  }
-  List<List<dynamic>> allExpenseFormatted = [];
 
-  //read data
+    List<List<dynamic>> allExpenseFormatted = [];
+    for (var expense in allExpense) {
+      List<dynamic> expenseFormatted = [];
+    }
+
+    //read data
+  }
 }
