@@ -100,6 +100,7 @@ class ExpenseData extends ChangeNotifier {
 
     // Notify listeners
     notifyListeners();
+    db.saveData(overallExpenseList);
   }
 
   // Get weekday (Mon, Tue, Wed, Thu, Fri, Sat, Sun) from a DateTime object
