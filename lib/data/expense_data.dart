@@ -91,6 +91,7 @@ class ExpenseData extends ChangeNotifier {
 
     // Notify listeners
     notifyListeners();
+    db.saveData(overallExpenseList);
   }
 
   // Delete expense
