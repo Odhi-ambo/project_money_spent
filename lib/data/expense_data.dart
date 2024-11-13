@@ -74,6 +74,7 @@ class ExpenseData extends ChangeNotifier {
     return overallExpenseList;
   }
   //prepare data to be displayed in the chart
+  void prepareData(){}
 
   // Add new expense
   void addNewExpense(ExpenseItem newExpense) {
