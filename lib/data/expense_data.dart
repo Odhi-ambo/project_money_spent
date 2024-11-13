@@ -1,3 +1,4 @@
+import 'package:expense_tracker/data/hive_database.dart';
 import 'package:expense_tracker/dateTime/date_time_helper.dart';
 
 import 'package:expense_tracker/models/expense_item.dart';
@@ -74,8 +75,10 @@ class ExpenseData extends ChangeNotifier {
     return overallExpenseList;
   }
   //prepare data to be displayed in the chart
+  final db = HiveDatabase();
   void prepareData(){
     //if their exists data, get it
+
     //if not, create a new list
   }
 
