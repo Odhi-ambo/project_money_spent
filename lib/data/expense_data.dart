@@ -73,6 +73,7 @@ class ExpenseData extends ChangeNotifier {
   List<ExpenseItem> getAllExpenseList() {
     return overallExpenseList;
   }
+  //prepare data to be displayed in the chart
 
   // Add new expense
   void addNewExpense(ExpenseItem newExpense) {
@@ -127,20 +128,21 @@ class ExpenseData extends ChangeNotifier {
 
   // Calculate daily expense summary
   Map<String, double> calculateDailyExpenseSummary() {
-  Map<String, double> dailyExpenseSummary = {};
-  for (var expense in overallExpenseList) {
-    // Convert DateTime object to string in yyyy-MM-dd format
-    String date = convertDateTimeToString(expense.date);
-    double amount = expense.amount; // No casting needed if amount is already a double
+    Map<String, double> dailyExpenseSummary = {};
+    for (var expense in overallExpenseList) {
+      // Convert DateTime object to string in yyyy-MM-dd format
+      String date = convertDateTimeToString(expense.date);
+      double amount =
+          expense.amount; // No casting needed if amount is already a double
 
-    if (dailyExpenseSummary.containsKey(date)) {
-      dailyExpenseSummary[date] = dailyExpenseSummary[date]! + amount;
-    } else {
-      dailyExpenseSummary[date] = amount;
+      if (dailyExpenseSummary.containsKey(date)) {
+        dailyExpenseSummary[date] = dailyExpenseSummary[date]! + amount;
+      } else {
+        dailyExpenseSummary[date] = amount;
+      }
     }
+    return dailyExpenseSummary;
   }
-  return dailyExpenseSummary;
-}
 
   // Helper function to convert DateTime to string in yyyy-MM-dd format
   //String convertDateTimeToString(DateTime dateTime) {
