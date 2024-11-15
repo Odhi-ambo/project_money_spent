@@ -60,7 +60,11 @@ class ExpenseSummary extends StatelessWidget {
       builder: (context, value, child) => Column(
         children: [
           //week total
-          Row(),
+          Row(
+            children: [
+              const Text('Week Total: '),
+            ],
+          ),
           SizedBox(
             height: 250,
             child: BarGraph(
