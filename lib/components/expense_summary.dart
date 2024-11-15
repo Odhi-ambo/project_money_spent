@@ -59,6 +59,7 @@ class ExpenseSummary extends StatelessWidget {
     return Consumer<ExpenseData>(
       builder: (context, value, child) => Column(
         children: [
+          //week total
           SizedBox(
             height: 250,
             child: BarGraph(
