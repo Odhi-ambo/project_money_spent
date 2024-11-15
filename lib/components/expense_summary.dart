@@ -8,6 +8,9 @@ class ExpenseSummary extends StatelessWidget {
   final DateTime startOfWeek;
   const ExpenseSummary({super.key, required this.startOfWeek});
 
+  //calculate max amount for the y-axis
+  
+
   @override
   Widget build(BuildContext context) {
     //get yyyy-mm-dd format of the start of the week
