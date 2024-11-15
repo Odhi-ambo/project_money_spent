@@ -62,7 +62,7 @@ class ExpenseSummary extends StatelessWidget {
           //week total
           Row(
             children: [
-              const Text('Week Total: '),
+              const Text('Total for the week: '),
             ],
           ),
           SizedBox(
