@@ -16,7 +16,7 @@ class ExpenseData extends ChangeNotifier {
   final db = HiveDatabase();
   void prepareData() {
     //if their exists data, get it
-    if (db.readData().isEmpty) {
+    if (db.readData().isNotEmpty) {
       overallExpenseList = db.readData();
     }
 
