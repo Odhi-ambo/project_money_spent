@@ -61,7 +61,7 @@ class ExpenseSummary extends StatelessWidget {
         children: [
           //week total
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(25.0),
             child: Row(
               children: [const Text('Total for the week: '), Text('kshs 5000')],
             ),
