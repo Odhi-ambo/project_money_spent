@@ -57,19 +57,23 @@ class ExpenseSummary extends StatelessWidget {
         convertDateTimeToString(startOfWeek.add(const Duration(days: 6)));
 
     return Consumer<ExpenseData>(
-      builder: (context, value, child) => SizedBox(
-        height: 250,
-        child: BarGraph(
-          maxY: calculateMax(value, sunday, monday, tuesday, wednesday,
-              thursday, friday, saturday),
-          sunAmount: value.calculateDailyExpenseSummary()[sunday] ?? 0,
-          monAmount: value.calculateDailyExpenseSummary()[monday] ?? 0,
-          tueAmount: value.calculateDailyExpenseSummary()[tuesday] ?? 0,
-          wedAmount: value.calculateDailyExpenseSummary()[wednesday] ?? 0,
-          thuAmount: value.calculateDailyExpenseSummary()[thursday] ?? 0,
-          friAmount: value.calculateDailyExpenseSummary()[friday] ?? 0,
-          satAmount: value.calculateDailyExpenseSummary()[saturday] ?? 0,
-        ),
+      builder: (context, value, child) => Column(
+        children: [
+          SizedBox(
+            height: 250,
+            child: BarGraph(
+              maxY: calculateMax(value, sunday, monday, tuesday, wednesday,
+                  thursday, friday, saturday),
+              sunAmount: value.calculateDailyExpenseSummary()[sunday] ?? 0,
+              monAmount: value.calculateDailyExpenseSummary()[monday] ?? 0,
+              tueAmount: value.calculateDailyExpenseSummary()[tuesday] ?? 0,
+              wedAmount: value.calculateDailyExpenseSummary()[wednesday] ?? 0,
+              thuAmount: value.calculateDailyExpenseSummary()[thursday] ?? 0,
+              friAmount: value.calculateDailyExpenseSummary()[friday] ?? 0,
+              satAmount: value.calculateDailyExpenseSummary()[saturday] ?? 0,
+            ),
+          ),
+        ],
       ),
     );
   }
