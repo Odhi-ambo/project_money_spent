@@ -99,6 +99,11 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
+  //delete expense
+  void deleteExpense(ExpenseItem expense) {
+    Provider.of<ExpenseData>(context, listen: false).deleteExpense(expense);
+  }
+
   //save expense
   void save() {
     //putting the dollar and cents together
