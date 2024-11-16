@@ -37,6 +37,8 @@ class ExpenseSummary extends StatelessWidget {
     max = values[values.length - 1] + 1000;
     return max == 0 ? 100 : max;
   }
+  //calculate the weekly total
+  
 
   @override
   Widget build(BuildContext context) {
