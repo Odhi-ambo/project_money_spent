@@ -132,7 +132,7 @@ class _HomePageState extends State<HomePage> {
           floatingActionButton: FloatingActionButton(
             onPressed: addNewExpense,
             backgroundColor: Colors.black,
-            child: const Icon(Icons.add),
+            child: const Icon(Icons.add, color: Colors.white),
           ),
           body: ListView(
             children: [
