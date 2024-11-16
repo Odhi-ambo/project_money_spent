@@ -63,7 +63,13 @@ class ExpenseSummary extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(25.0),
             child: Row(
-              children: [const Text('Total for the week: '), Text('kshs 5000')],
+              children: [
+                const Text(
+                  'Total for the week: ',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                Text('kshs 5000')
+              ],
             ),
           ),
           SizedBox(
