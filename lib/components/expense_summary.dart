@@ -38,7 +38,35 @@ class ExpenseSummary extends StatelessWidget {
     return max == 0 ? 100 : max;
   }
   //calculate the weekly total
-  
+  double calculateWeeklyTotal(
+    ExpenseData value,
+    String sunday,
+    String monday,
+    String tuesday,
+    String wednesday,
+    String thursday,
+    String friday,
+    String saturday,
+    
+    
+  ){
+    List <double> values =[
+    value.calculateDailyExpenseSummary()[sunday] ?? 0,
+    value.calculateDailyExpenseSummary()[monday] ?? 0,
+    value.calculateDailyExpenseSummary()[tuesday] ?? 0,
+    value.calculateDailyExpenseSummary()[wednesday] ?? 0,
+    value.calculateDailyExpenseSummary()[thursday] ?? 0,
+    value.calculateDailyExpenseSummary()[friday] ?? 0,
+    value.calculateDailyExpenseSummary()[saturday] ?? 0,
+    
+    ];
+    double  total = 0;
+    for (int i = 0; i < values.length; i++){
+      total += values[i];
+    }
+    return total;
+  }
+
 
   @override
   Widget build(BuildContext context) {
