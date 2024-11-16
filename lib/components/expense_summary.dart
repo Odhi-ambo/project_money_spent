@@ -96,7 +96,7 @@ class ExpenseSummary extends StatelessWidget {
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
                 Text(
-                  '\kshs ${calculateWeeklyTotal(value, sunday, monday, tuesday, wednesday, thursday, friday, saturday)}',
+                  'kshs ${calculateWeeklyTotal(value, sunday, monday, tuesday, wednesday, thursday, friday, saturday)}',
                 ),
               ],
             ),
