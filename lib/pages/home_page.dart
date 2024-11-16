@@ -131,7 +131,7 @@ class _HomePageState extends State<HomePage> {
       builder: (context, value, child) => Scaffold(
           floatingActionButton: FloatingActionButton(
             onPressed: addNewExpense,
-            backgroundColor: Colors.amber,
+            backgroundColor: Colors.black,
             child: const Icon(Icons.add),
           ),
           body: ListView(
