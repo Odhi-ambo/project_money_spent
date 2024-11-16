@@ -37,6 +37,7 @@ class ExpenseSummary extends StatelessWidget {
     max = values[values.length - 1] + 1000;
     return max == 0 ? 100 : max;
   }
+
   //calculate the weekly total
   double calculateWeeklyTotal(
     ExpenseData value,
@@ -47,26 +48,22 @@ class ExpenseSummary extends StatelessWidget {
     String thursday,
     String friday,
     String saturday,
-    
-    
-  ){
-    List <double> values =[
-    value.calculateDailyExpenseSummary()[sunday] ?? 0,
-    value.calculateDailyExpenseSummary()[monday] ?? 0,
-    value.calculateDailyExpenseSummary()[tuesday] ?? 0,
-    value.calculateDailyExpenseSummary()[wednesday] ?? 0,
-    value.calculateDailyExpenseSummary()[thursday] ?? 0,
-    value.calculateDailyExpenseSummary()[friday] ?? 0,
-    value.calculateDailyExpenseSummary()[saturday] ?? 0,
-    
+  ) {
+    List<double> values = [
+      value.calculateDailyExpenseSummary()[sunday] ?? 0,
+      value.calculateDailyExpenseSummary()[monday] ?? 0,
+      value.calculateDailyExpenseSummary()[tuesday] ?? 0,
+      value.calculateDailyExpenseSummary()[wednesday] ?? 0,
+      value.calculateDailyExpenseSummary()[thursday] ?? 0,
+      value.calculateDailyExpenseSummary()[friday] ?? 0,
+      value.calculateDailyExpenseSummary()[saturday] ?? 0,
     ];
-    double  total = 0;
-    for (int i = 0; i < values.length; i++){
+    double total = 0;
+    for (int i = 0; i < values.length; i++) {
       total += values[i];
     }
     return total;
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -98,7 +95,12 @@ class ExpenseSummary extends StatelessWidget {
                   'Total for the week: ',
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
-                Text('kshs 5000')
+                Text(
+                  calculateWeeklyTotal(value, sunday, monday, tuesday,
+                          wednesday, thursday, friday, saturday)
+                      .toStringAsFixed(2),
+                  style: const TextStyle(fontWeight: FontWeight.bold),
+                ),
               ],
             ),
           ),
