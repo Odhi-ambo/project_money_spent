@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => ExpenseData(),
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Expense Tracker',
         theme: ThemeData(
           primarySwatch: Colors.blue,
