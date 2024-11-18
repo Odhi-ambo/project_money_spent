@@ -5,18 +5,21 @@ class ExpenseTile extends StatelessWidget {
   final String name;
   final double amount;
   final DateTime date;
+  final Function(BuildContext)? deleteTapped;
 
   const ExpenseTile(
       {super.key,
       required this.name,
       required this.amount,
-      required this.date});
+      required this.date,
+      required this.deleteTapped});
 
   @override
   Widget build(BuildContext context) {
     return Slidable(
-      endActionPane: const ActionPane(motion: StretchMotion(), children: [
+      endActionPane:  ActionPane(motion: StretchMotion(), children: [
         //delete button
+        SlidableAction(onPressed: deleteTapped,icon: Icons.delete,)
       ]),
       child: ListTile(
         title: Text(
