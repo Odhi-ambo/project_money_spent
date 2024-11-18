@@ -160,6 +160,7 @@ class _HomePageState extends State<HomePage> {
                   name: value.getAllExpenseList()[index].name,
                   amount: value.getAllExpenseList()[index].amount,
                   date: value.getAllExpenseList()[index].date,
+                  deleteTapped: (p0) => deleteExpense(value.getAllExpenseList()[index]),
                 ),
               ),
             ],
