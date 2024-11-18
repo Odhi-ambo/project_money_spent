@@ -17,9 +17,14 @@ class ExpenseTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Slidable(
-      endActionPane:  ActionPane(motion: StretchMotion(), children: [
+      endActionPane: ActionPane(motion: StretchMotion(), children: [
         //delete button
-        SlidableAction(onPressed: deleteTapped,icon: Icons.delete,)
+        SlidableAction(
+          onPressed: deleteTapped,
+          icon: Icons.delete,
+          backgroundColor: Colors.redAccent,
+          borderRadius: BorderRadius.circular(5),
+        )
       ]),
       child: ListTile(
         title: Text(
