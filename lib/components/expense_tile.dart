@@ -15,6 +15,7 @@ class ExpenseTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Slidable(
+      endActionPane: ActionPane(motion: StretchMotion(), children: []),
       child: ListTile(
         title: Text(
           name,
